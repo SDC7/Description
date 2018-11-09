@@ -1,4 +1,5 @@
 import React from 'react';
+import '../public/style.css';
 
 const Description = (props) => {
 
