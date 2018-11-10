@@ -47,9 +47,5 @@ class App extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-// ReactDom.render(<App />, document.getElementById('description'));
-=======
-//ReactDom.render(<App />, document.getElementById('description'));
->>>>>>> 31bb7bd7d6a3d36cd68775c6fcc467c5552e8503
+
 window.Description = App;
