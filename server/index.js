@@ -5,7 +5,8 @@ const cors = require('cors');
 const Description = require('../database-mongodb/description.js');
 
 const app = express();
-const PORT = 3003;
+const PORT = process.env.PORT || 8081;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -32,6 +33,6 @@ app.get('/description', (req, res) => {
 // });
 
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+app.listen(('PORT'), () => {
+  console.log(`listening on port + ${PORT}`);
 });

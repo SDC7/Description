@@ -1,13 +1,9 @@
 {
   "name": "fec",
   "version": "1.0.0",
-  "description": "> Project description",
-  "author": "",
+  "description": "Project description",
+  "author": "Jess",
   "license": "ISC",
-  "main": ".eslintrc.js",
-  "directories": {
-    "example": "example"
-  },
   "engines": {
     "node": ">=6.13.0"
   },

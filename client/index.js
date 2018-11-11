@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3003/description")
+    fetch("http://airjld.us-east-2.elasticbeanstalk.com/description")
       .then(res => res.json())
       .then(
         (result) => {
@@ -20,7 +20,7 @@ class App extends React.Component {
             isLoaded: true,
             description: result
           })
-        console.log(this.state.description)
+        //console.log(this.state.description)
         },
         (error) => {
           this.setState({
