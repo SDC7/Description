@@ -1,17 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
-const cors = require('cors');
+
 const Description = require('../database-mongodb/description.js');
 
 const app = express();
-const PORT = process.env.PORT || 8081;
+const port = 3322;
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
-app.use(express.static(path.join(__dirname, '..', '/public')));
+app.use(express.static(__dirname + '/../public'))
 
 app.get('/description', (req, res) => {
   Description.count().exec(function(err, count) {
@@ -33,6 +31,6 @@ app.get('/description', (req, res) => {
 // });
 
 
-app.listen(('PORT'), () => {
-  console.log(`listening on port + ${PORT}`);
+app.listen(port, () => {
+  console.log(`listening on port 3322`);
 });
