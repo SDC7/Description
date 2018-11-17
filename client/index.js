@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://airjld.us-east-2.elasticbeanstalk.com/description")
+    fetch("http://localhost:3322/description")
       .then(res => res.json())
       .then(
         (result) => {
@@ -47,5 +47,4 @@ class App extends React.Component {
   }
 }
 
-
-window.Description = App;
+ReactDom.render(<App />, document.getElementById('description'));

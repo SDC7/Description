@@ -23,11 +23,16 @@ for (var i = 1; i <= 100; i++) {
     //sampleData.city = faker.address.city();
 
 
-    Description.create(sampleData, (err, result) => {
-      if (err) {
-        console.log('Error seeding database')
-      }
-    })
+    // Description.create(sampleData, (err, result) => {
+    //   if (err) {
+    //     console.log('Error seeding database')
+    //   }
+    // })
   };
 
+const insertDescription = function() {
+  Description.create(description).then(() => db.close());
+};
+
+insertDescription();
 
