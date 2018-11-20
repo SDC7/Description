@@ -26,9 +26,30 @@ app.get('/description', (req, res) => {
   });
 });
 
-// app.post('/', (req, res) => {
+app.delete('/description', (req, res) => {
+  Description.deleteOne({id: req.params.id}, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  }
+});
 
-// });
+app.put('/description', (req, res) => {
+  Description.updateOne({id: req.params.id} , (err) => {
+    if (err) {
+      console.log(err);
+    }
+  })
+});
+
+app.post('/description', (req, res) => {
+  const description = new Description(req.body.description);
+  description.save((err) => {
+    if(err) {
+      console.log(err);
+    }
+  })
+})
 
 
 app.listen(port, () => {
