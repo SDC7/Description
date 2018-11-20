@@ -8,6 +8,7 @@ for (var i = 1; i <= 100; i++) {
   let optionsArr = ["Entire house", "Entire apartment", "Entire Townhouse"]
   let percent = [90,91,92,93,94,95,96,97,98];
   let sampleData = {};
+    sampleData.id = i;
     sampleData.imageUrl = faker.image.avatar();
     sampleData.Owner = faker.name.findName();
     sampleData.houseName = faker.lorem.sentence();
