@@ -10,7 +10,7 @@ for (var i = 1; i <= 500000; ++i) {
   let optionsArr = ["Entire house", "Entire apartment", "Entire Townhouse"]
   let percent = [90,91,92,93,94,95,96,97,98];
   desArr.push({
-
+    'id': i,
     'imageUrl': faker.image.avatar(),
     'Owner': faker.name.findName(),
     'houseName': faker.lorem.sentence(),

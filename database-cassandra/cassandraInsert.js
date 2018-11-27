@@ -16,7 +16,7 @@ const models = ExpressCassandra.createClient({
   }
 });
 
-var descriptionModel = models.loadSchema('Description', {
+var descriptionModel = models.loadSchema('data', {
   fields: {
     id: 'int',
     imageUrl: 'text',
@@ -40,6 +40,6 @@ descriptionModel.syncDB(function(err, result) {
   if (err) {
     console.log(err);
   } else {
-    console.log('New description schema', result);
+    console.log('New description schema');
   }
 });
