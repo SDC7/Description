@@ -19,17 +19,16 @@ const models = ExpressCassandra.createClient({
 var descriptionModel = models.loadSchema('data', {
   fields: {
     id: 'int',
-    imageUrl: 'text',
     Owner: 'text',
-    houseName: 'text',
-    full: 'text',
-    description: 'text',
+    amenities: 'text',
+    baths: 'int',
     bedrooms: 'int',
     beds: 'int',
+    description: 'text',
+    full: 'text',
     guests: 'int',
-    baths: 'int',
-    amenities: 'text',
-    city: 'text',
+    houseName: 'text',
+    imageUrl: 'text',
     lock: 'text',
     rate: 'int'
   },
