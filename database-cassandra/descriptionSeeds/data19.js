@@ -11,16 +11,16 @@ for (var i = 9000001; i <= 9500000; i++) {
   let percent = [90,91,92,93,94,95,96,97,98];
   desArr.push({
     'id': i,
-    'imageUrl': faker.image.avatar(),
     'Owner': faker.name.findName(),
-    'houseName': faker.lorem.sentence(),
-    'description': faker.lorem.paragraph(),
+    'amenities': amenitiesArr[Math.floor(Math.random() * amenitiesArr.length)],
+    'baths': Math.floor(Math.random() * 7) + 1,
     'bedrooms': Math.floor(Math.random() * 5) + 1,
     'beds': Math.floor(Math.random() * 10) + 1,
-    'guests': Math.floor(Math.random() * 2) + 1,
-    'baths': Math.floor(Math.random() * 7) + 1,
-    'amenities': amenitiesArr[Math.floor(Math.random() * amenitiesArr.length)],
+    'description': faker.lorem.paragraph(),
     'full': optionsArr[Math.floor(Math.random() * optionsArr.length)],
+    'guests': Math.floor(Math.random() * 2) + 1,
+    'houseName': faker.lorem.sentence(),
+    'imageUrl': faker.image.avatar(),
     'lock': checkIn[Math.floor(Math.random() * checkIn.length)],
     'rate': percent[Math.floor(Math.random() * checkIn.length)]
   })
