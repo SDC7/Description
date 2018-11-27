@@ -31,7 +31,7 @@ app.delete('/description', (req, res) => {
     if (err) {
       console.log(err);
     }
-  }
+  })
 });
 
 app.put('/description', (req, res) => {

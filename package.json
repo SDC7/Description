@@ -9,13 +9,15 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
-    "seedDb": "node database-cassandra/descriptionSeeds/data1.js; node database-cassandra/descriptionSeeds/data2.js; node database-cassandra/descriptionSeeds/data3.js; node database-cassandra/descriptionSeeds/data4.js; node database-cassandra/descriptionSeeds/data5.js; node database-cassandra/descriptionSeeds/data6.js; node database-cassandra/descriptionSeeds/data7.js; node database-cassandra/descriptionSeeds/data8.js; node database-cassandra/descriptionSeeds/data9.js; node database-cassandra/descriptionSeeds/data10.js; node database-cassandra/descriptionSeeds/data11.js; node database-cassandra/descriptionSeeds/data12.js; node database-cassandra/descriptionSeeds/data13.js; node database-cassandra/descriptionSeeds/data14.js; node database-cassandra/descriptionSeeds/data15.js; node database-cassandra/descriptionSeeds/data16.js; node database-cassandra/descriptionSeeds/data17.js; node database-cassandra/descriptionSeeds/data18.js; node database-cassandra/descriptionSeeds/data19.js; node database-cassandra/descriptionSeeds/data20.js",
+    "createCSV": "node database-cassandra/descriptionSeeds/data1.js; node database-cassandra/descriptionSeeds/data2.js; node database-cassandra/descriptionSeeds/data3.js; node database-cassandra/descriptionSeeds/data4.js; node database-cassandra/descriptionSeeds/data5.js; node database-cassandra/descriptionSeeds/data6.js; node database-cassandra/descriptionSeeds/data7.js; node database-cassandra/descriptionSeeds/data8.js; node database-cassandra/descriptionSeeds/data9.js; node database-cassandra/descriptionSeeds/data10.js; node database-cassandra/descriptionSeeds/data11.js; node database-cassandra/descriptionSeeds/data12.js; node database-cassandra/descriptionSeeds/data13.js; node database-cassandra/descriptionSeeds/data14.js; node database-cassandra/descriptionSeeds/data15.js; node database-cassandra/descriptionSeeds/data16.js; node database-cassandra/descriptionSeeds/data17.js; node database-cassandra/descriptionSeeds/data18.js; node database-cassandra/descriptionSeeds/data19.js; node database-cassandra/descriptionSeeds/data20.js",
+    "seedDb": "node database-postgres/seedpg.js",
     "test": "jest",
     "dev:react": "webpack -d --watch",
     "build": "webpack -p"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cassandra-driver": "^3.5.0",
     "chai": "^4.2.0",
     "chance": "^1.0.16",
     "cors": "^2.8.5",
@@ -26,6 +28,7 @@
     "jquery": "^3.3.1",
     "mongoose": "^5.3.6",
     "nodemon": "^1.18.4",
+    "pg": "^7.6.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },
