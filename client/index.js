@@ -12,15 +12,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3322/description")
+    let id = Number(window.location.pathname.replace(/\//, ''));
+    fetch(`http://localhost:3322/description/${id}`)
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            description: result
+            description: result.data
           })
-        //console.log(this.state.description)
+        console.log(this.state.description)
         },
         (error) => {
           this.setState({

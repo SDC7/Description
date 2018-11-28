@@ -1,2 +1,4 @@
-*.csv
 node_modules
+newrelic.js
+*.csv
+node_modules/bluebird
