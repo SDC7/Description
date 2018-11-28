@@ -1,12 +1,18 @@
-// const { Pool } = require('pg');  // non local host
-const pg = require('pg');
-// connection string
-const connection = "postgres://@localhost:5432/description";
-// new connection
-const db = new pg.Client(connection);
+// // const { Pool } = require('pg');  // non local host
+// const pgp = require('pg-promise');
+// // connection string
+// var promise = require('bluebird');
 
-// connect
-db.connect();
+// var options = {
+//   promiseLib: promise
+// };
+
+// const connection = "postgres://@localhost:5432/description";
+// // new connection
+// const db = pgp(connection);
+
+// // connect
+// // db.connect();
 
 
 const description =
